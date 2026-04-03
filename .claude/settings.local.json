@@ -1,7 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Bash(node -e \"const p = require\\('./node_modules/next/package.json'\\); console.log\\(p.version\\)\")"
+      "Bash(node -e \"const p = require\\('./node_modules/next/package.json'\\); console.log\\(p.version\\)\")",
+      "Bash(git -C /Users/carlosperezroca/Sites/carlosperezroca-landing log --oneline --all)",
+      "Bash(git -C /Users/carlosperezroca/Sites/carlosperezroca-landing show --stat HEAD)",
+      "Bash(git -C /Users/carlosperezroca/Sites/carlosperezroca-landing status)",
+      "Bash(git -C /Users/carlosperezroca/Sites/carlosperezroca-landing log --oneline origin/main..HEAD)"
     ]
   }
 }
