@@ -1,38 +1,17 @@
-import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import './globals.css';
+import type { Metadata } from 'next';
+import type { PropsWithChildren } from 'react';
 
 export const metadata: Metadata = {
-  title: "Carlos Pérez Roca · Software Engineer",
-  description: "Frontend engineer focused on product, performance and well-crafted digital experiences.",
+  title: 'Carlos Pérez Roca',
+  description:
+    'Frontend, producto y experiencias web con criterio, claridad y atención al detalle.',
 };
 
-export const viewport: Viewport = {
-  width: "device-width",
-  initialScale: 1,
-};
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html
-      lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col" suppressHydrationWarning>{children}</body>
+    <html lang="es">
+      <body>{children}</body>
     </html>
   );
 }
