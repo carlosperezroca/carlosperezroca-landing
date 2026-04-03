@@ -4,7 +4,6 @@ const nextConfig: NextConfig = {
   // Disable streaming metadata to prevent SSR/client hydration mismatch
   // caused by inconsistent `hidden` attribute on MetadataWrapper div in Next.js 16
   htmlLimitedBots: /.*/,
-  output: 'export',
 };
 
 export default nextConfig;
